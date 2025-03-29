@@ -1,17 +1,12 @@
 # Standard Cell Design & Characterization (GPDK180)
 
 ## Goal
-We designed three fundamental building blocks ("standard cells") for digital chips:
-1. **Inverter** (NOT gate) - Flips input logic (1→0, 0→1)
-2. **NAND gate** - Outputs 0 only when ALL inputs are 1
-3. **NOR gate** - Outputs 0 when ANY input is 1
+We designed three fundamental building blocks ("standard cells") for digital components:
+1. **Inverter**
+2. **NAND gate** - outputs 0 only when ALL inputs are 1
+3. **NOR gate** - outputs 0 when ANY input is 1
 
-Then, we combined these to create a **half adder** circuit that can:
-- Add two 1-bit numbers (`a` and `b`)
-- Produce:
-  - `s` (sum) = `a XOR b` (1 if inputs differ)
-  - `cout` (carry) = `a AND b` (1 if both inputs are 1)
-
+implement a half adder using these standard cells **half adder** 
 ---
 
 ## Workflow Explained
@@ -20,7 +15,6 @@ Then, we combined these to create a **half adder** circuit that can:
 
 - schematic - a diagram showing how components connect (like a circuit recipe).
 
-**What we did**:
 1. Opened **Cadence Virtuoso** (industry-standard chip design software)
 2. Used pre-made transistors from `analogLib` (like Lego pieces)
 3. Connected them to build:
@@ -34,9 +28,8 @@ Then, we combined these to create a **half adder** circuit that can:
 
 ### Symbol Creation 
 
-- symbol - a simplified visual representation of your cell (hides internal details).
+- symbol - a simplified visual representation of your cell (hides internal details)
 
-**What we did**:
 1. Created symbols for each gate (drag-and-drop blocks)
 2. Built **testbenches** (test environments) to:
    - Apply input combinations (00, 01, 10, 11)
@@ -45,10 +38,8 @@ Then, we combined these to create a **half adder** circuit that can:
 ---
 
 ### Layout Design 
-**What's layout?**  
-The actual silicon mask design (where transistors/wires physically sit).
 
-**Key Constraints**:
+- layout - The actual silicon mask design (where transistors/wires physically sit).
 - **12-track height**: All cells same height for easy stacking
 - **Layers**:
   - **PolySi**: Forms transistor gates
