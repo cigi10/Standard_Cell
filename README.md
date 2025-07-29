@@ -20,4 +20,4 @@ characterized and used to synthesize a half adder.
 Schematic → Layout → Characterization → Half Adder Synthesis
 
 ## Tools
-Virtuoso | Assura | Liberate
+Virtuoso | Assura | Liberate | Genus
